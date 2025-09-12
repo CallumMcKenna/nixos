@@ -1,0 +1,162 @@
+/* This is based on the config at https://github.com/Zilero232/arch-install-kit/blob/master/dotfiles/.config/waybar/style.css */
+/* Colors*/
+@define-color background #3c3836;
+@define-color border #7c6f64;
+@define-color white #dfbf8e;
+@define-color red #cc241d;
+@define-color green #98971a;
+@define-color yellow #d79921;
+@define-color blue #458588;
+@define-color purple #b16286;
+@define-color aqua #689d6a;
+@define-color orange #d65d0e;
+
+/* General styles */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background: @background;
+  border-bottom: 1px solid @border;
+}
+
+/* Tooltips */
+tooltip {
+  background: @background;
+  color: @white;
+  border: 1px solid @border;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+tooltip label {
+  color: @white;
+  font-size: 12px;
+}
+
+/* Workspaces */
+#workspaces {
+  background: @background;
+  padding: 4px;
+  margin: 6px 2px;
+  border-radius: 12px;
+  border: 2px solid @border
+}
+
+#workspaces button {
+  padding: 6px 10px;
+  margin: 0 2px;
+  background: @background;
+  color: @white;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 1px solid @border;
+}
+
+#workspaces button.focused {
+  background: @border;
+  font-weight: 900;
+}
+
+#workspaces button:hover {
+  background: @white;
+  color: @background;
+}
+
+/* Window title */
+#window {
+  background: @background;
+  color: @white;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid @border;
+  font-weight: 500;
+}
+
+/* Modules */
+#clock {
+  background: @red;
+  color: @background;
+  margin: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+#network {
+  background: @background;
+  color: @yellow;
+  border-left: 4px solid @yellow;
+  margin: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+#pulseaudio {
+  background: @background;
+  color: @blue;
+  border-left: 4px solid @blue;
+  margin: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+#temperature {
+  background: @background;
+  color: @red;
+  border-left: 4px solid @red;
+  margin: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+#cpu {
+  background: @background;
+  color: @green;
+  border-left: 4px solid @green;
+  margin: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+#disk {
+  background: @background;
+  color: @purple;
+  border-left: 4px solid @purple;
+  margin: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+#memory {
+  background: @background;
+  color: @orange;
+  border-left: 4px solid @orange;
+  margin: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+#battery {
+  background: @background;
+  color: @aqua;
+  border-left: 4px solid @aqua;
+  margin: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
