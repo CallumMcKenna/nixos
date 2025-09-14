@@ -30,9 +30,7 @@ in
         # Launch waybar on startup
         startup = [
           { command = "waybar"; }
-          # Styles option declared in waybar config
-          #{ command = if config.styles.gruvbox.em.enable then "swww img ~/config/modules/display/wallpapers/em.jpg" else if config.styles.tokyonight.mamoth.enable then "swww img ~/config/modules/display/wallpapers/mamoth.jpg" else "swww img ~/config/modules/display/wallpapers/gruvbox-penguin.jpg"; }
-          { command = "swww img ~/config/modules/display/wallpapers/tlou.jpg"; }
+          { command = "swww img ~/config/modules/display/wallpaper.jpg"; }
         ];
 
         window.titlebar = false;

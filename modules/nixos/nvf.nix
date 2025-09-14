@@ -1,12 +1,5 @@
 { lib, config, ... }: {
-  options = {
-    defaultPkgs.nvf.enable = lib.mkEnableOption "enables nvf" // { default = true; };
-    styles = {
-      # Penguin is default
-      gruvbox.em.enable = lib.mkEnableOption "Enables the eminem theme for all nixos modules" // { default = false; };
-      tokyonight.mamoth.enable = lib.mkEnableOption "Enables the mamoth theme for all nixos modules" // { default = false; };
-    };
-  };
+  options.defaultPkgs.nvf.enable = lib.mkEnableOption "enables nvf" // { default = true; };
 
   config = lib.mkIf config.defaultPkgs.enable { # Option enabled in ./defaultPkgs.nix
     programs.nvf = lib.mkIf config.defaultPkgs.nvf.enable {
@@ -27,8 +20,7 @@
           };
           theme = {
             enable = true;
-            name = if config.styles.tokyonight.mamoth.enable then "tokyonight" else "gruvbox";
-            style = if config.styles.tokyonight.mamoth.enable then "storm" else "dark";
+            name = "nord";
           };
 
           # Plugins
