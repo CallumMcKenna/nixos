@@ -1,5 +1,6 @@
 /* This is based off of kamlandra's config in github.com/Alexays/Waybar/wiki/Examples */
 /* Colors */ 
+@define-color black #2E3440;
 @define-color white #ECEFF4;
 @define-color light-grey #4C566A;
 @define-color yellow #EBCB8B;
@@ -18,17 +19,18 @@
 }
 
 window#waybar {
-  background: (255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0); /* Make the bar transparent */
 }
 
 #workspaces button {
-  color: @yellow;
+  background: @white;
+  color: @black;
   box-shadow: inset 0 -3px transparent;
 }
 
 #workspaces button:hover {
-  background: @white;
-  color: @background;
+  background: @black;
+  color: @white;
 }
 
 #workspaces button.focused {
@@ -36,13 +38,13 @@ window#waybar {
 }
 
 tooltip {
-  background: @background;
-  color: @yellow;
+  background: @white;
+  color: @black;
   padding: 0 10px;
 }
 
 tooltip label {
-  color: @yellow;
+  color: @black;
   font-size: 12px;
 }
 
@@ -51,17 +53,13 @@ tooltip label {
 #cpu,
 #memory,
 #temperature,
-#backlight,
 #network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd {
+#pulseaudio, 
+#disk,
+#workspaces {
   padding: 0 10px;
   margin: 6px 3px;
-  color: @yellow;
+  color: @black;
 }
 
 #window,
@@ -80,18 +78,18 @@ tooltip label {
 }
 
 #clock {
-  background-color: @background;
-  color: @yellow;
+  background-color: @white;
+  color: @black;
 }
 
 #battery {
-  background-color: @background;
-  color: @yellow;
+  background-color: @white;
+  color: @black;
 }
 
 #battery.charging {
   color: @green;
-  background-color: @background;
+  background-color: @white;
 }
 
 #battery.warning:not(.charging) {
@@ -114,27 +112,18 @@ tooltip label {
 }
 
 #cpu {
-  background-color: @background;
-  color: @yellow; 
-
-  /* I have to add this cause they are in a group */
-  padding: 0 10px;
-  margin: 6px 3px;
+  background-color: @white;
+  color: @black; 
 }
 
 #memory {
-  background-color: @background;
-  color: @yellow; 
-
-  /* I have to add this cause they are in a group */
-  padding: 0 10px;
-  margin: 6px 3px;
-
+  background-color: @white;
+  color: @black; 
 }
 
 #network {
-  background-color: @background;
-  color: @yellow;
+  background-color: @white;
+  color: @black;
 }
 
 #network.disconnected {
@@ -142,30 +131,26 @@ tooltip label {
 }
 
 #pulseaudio {
-  background-color: @background;
-  color: @yellow;
+  background-color: @white;
+  color: @black;
 }
 
 #pulseaudio.muted {
-  background-color: @background;
+  background-color: @white;
   color: @light-grey;
 }
 
 #temperature {
-  background-color: @background;
-  color: @yellow;
+  background-color: @white;
+  color: @black;
 }
 
 #temperature.critical {
-  background-color: @background;
+  background-color: @white;
   color: @red;
 }
 
 #disk {
-  background-color: @background;
-  color: @yellow; 
-
-  /* I have to add this cause they are in a group */
-  padding: 0 10px;
-  margin: 6px 3px;
+  background-color: @white;
+  color: @black; 
 }

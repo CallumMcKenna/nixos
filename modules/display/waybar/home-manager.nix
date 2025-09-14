@@ -18,14 +18,6 @@
 
           # Module Layout
           modules-left = [ "disk" "cpu" "memory" "temperature" ];
-          modules-right = [ "clock" ];
-
-          "clock" = {
-            interval = 60;
-            tooltip = true;
-            format = "{:%H:%M}";
-            tooltip-format = "{:%m-%d-%Y}";
-          };
 
           # Modules
           "temperature" = {
@@ -55,11 +47,18 @@
           # Module Layout
           modules-left = [ "network" "pulseaudio" ];
           modules-center = [ "sway/workspaces" ];
-          modules-right = [ "battery" ];
+          modules-right = [ "clock" "battery" ];
 
           # Modules
           "sway/workspaces" = {
             disable-scroll = true;
+          };
+
+          "clock" = {
+            interval = 60;
+            tooltip = true;
+            format = "{:%H:%M}";
+            tooltip-format = "{:%m-%d-%Y}";
           };
 
           "network" = {
