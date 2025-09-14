@@ -9,8 +9,6 @@
 	        ./../../modules/home-manager/default.nix
   ];
 
-  styles.gruvbox.em.enable = true;
-
 	# This value determines the Home Manager release that your configuration is
 	# compatible with. This helps avoid breakage when a new Home Manager release
 	# introduces backwards incompatible changes.

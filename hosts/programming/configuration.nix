@@ -11,8 +11,6 @@
     #./../../modules/nixos/vpn/vpn.nix
   ];
 
-  styles.gruvbox.em.enable = true;
-
 	# Enable home manager for my main user
 	home-manager = {
 		extraSpecialArgs = { inherit inputs; };

@@ -11,8 +11,6 @@
     #./../../modules/nixos/vpn/vpn.nix
   ];
 
-  styles.tokyonight.mamoth.enable = true;
-
   browsers.tor.enable = false;
   browsers.librewolf.enable = false;
  	browsers.firefox.bookmarks.school.enable = true;
