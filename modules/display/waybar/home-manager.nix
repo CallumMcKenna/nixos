@@ -6,7 +6,7 @@
     settings.mainBar = {
       modules-left = [ "clock" "network" "pulseaudio" ];
       modules-center = [ "sway/workspaces" ];
-      modules-right = [ "temperature" "cpu" "memory" "disk#config" "battery" ];
+      modules-right = [ "temperature" "cpu" "memory" "group/disk" "battery" ];
 
       # Disk group
       "disk" = {
@@ -14,12 +14,12 @@
       };
 
       "disk#config" = {
-        path = /home/callum/config;
+        path = ./../../..;
         format = "Config: {used}";
       };
 
       "disk#code" = {
-        path = "~/code";
+        path = ./../../../../code;
         format = "Code: {used}";
       };
 
