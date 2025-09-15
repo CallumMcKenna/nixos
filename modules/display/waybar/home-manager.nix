@@ -3,10 +3,10 @@
 {
   programs.waybar = {
     enable = true;
-    mainBar.settings = {
+    settings.mainBar = {
       modules-left = [ "clock" "network" "pulseaudio" ];
       modules-center = [ "sway/workspaces" ];
-      modules-right = [ "temperature" "cpu" "memory" "group/disk" "battery" ];
+      modules-right = [ "temperature" "cpu" "memory" "disk#config" "battery" ];
 
       # Disk group
       "disk" = {
@@ -14,7 +14,7 @@
       };
 
       "disk#config" = {
-        path = "~/config";
+        path = home/callum/config;
         format = "Config: {used}";
       };
 
@@ -28,6 +28,7 @@
         drawer = {
           transition-duration = 500;
           transition-left-to-right = false;
+          click-to-reveal = true;
         };
         modules = [
           "disk"
