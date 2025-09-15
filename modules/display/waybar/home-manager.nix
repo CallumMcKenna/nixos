@@ -18,11 +18,6 @@
         format = "Config: {used}";
       };
 
-      "disk#code" = {
-        path = ./../../../../code;
-        format = "Code: {used}";
-      };
-
       "group/disk" = {
         orientation = "inherit";
         drawer = {
@@ -33,7 +28,7 @@
         modules = [
           "disk"
           "disk#config"
-          "disk#code"
+          # Add the code size too
         ];
       };
     };
