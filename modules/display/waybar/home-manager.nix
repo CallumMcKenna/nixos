@@ -14,7 +14,7 @@
       };
 
       "disk#config" = {
-        path = home/callum/config;
+        path = /home/callum/config;
         format = "Config: {used}";
       };
 
