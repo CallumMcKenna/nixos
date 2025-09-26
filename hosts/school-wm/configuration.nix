@@ -8,11 +8,11 @@
 		# nixos modules
 		./../../modules/nixos/default.nix
 		./../../modules/nixos/browsers/default.nix
-<<<<<<< HEAD
-    #./../../modules/nixos/vpn/vpn.nix
-=======
->>>>>>> 470af26 (changed file structure)
   ];
+
+  browsers.tor.enable = false;
+  browsers.librewolf.enable = false;
+ 	browsers.firefox.bookmarks.school.enable = true;
 
 	# Enable home manager for my main user
 	home-manager = {
@@ -21,12 +21,4 @@
 			"callum" = import ./home.nix;
 		};
 	};
-<<<<<<< HEAD
-
-	programs.sway = {
-		enable = true;
-		wrapperFeatures.gtk = true;
-	};
-=======
->>>>>>> 470af26 (changed file structure)
 }

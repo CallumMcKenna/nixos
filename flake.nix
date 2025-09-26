@@ -17,19 +17,37 @@
 
 	outputs = { self, nixpkgs, ... }@inputs: {
 		nixosConfigurations = {
-			programming = nixpkgs.lib.nixosSystem {
+			programming-wm = nixpkgs.lib.nixosSystem {
 				specialArgs = { inherit inputs; };
 				modules = [
-					./hosts/programming/configuration.nix
+					./hosts/programming-wm/configuration.nix
 					inputs.nvf.nixosModules.default
 					inputs.home-manager.nixosModules.default
 				];
 			};
 
-      school = nixpkgs.lib.nixosSystem {
+      programming-env = nixpkgs.lib.nixosSystem {
+				specialArgs = { inherit inputs; };
+				modules = [
+					./hosts/programming-env/configuration.nix
+					inputs.nvf.nixosModules.default
+					inputs.home-manager.nixosModules.default
+				];
+			};
+
+      school-wm = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/school/configuration.nix
+          ./hosts/school-wm/configuration.nix
+          inputs.nvf.nixosModules.default
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+
+      school-env = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/school-env/configuration.nix
           inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.default
         ];

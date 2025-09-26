@@ -1,0 +1,32 @@
+{ inputs, ... }:
+
+{
+	imports = [
+		./hardware-configuration.nix
+		inputs.home-manager.nixosModules.default
+
+		# nixos modules
+		./../../modules/nixos/default.nix
+		./../../modules/nixos/browsers/default.nix
+  ];
+
+  browsers.tor.enable = false;
+  browsers.librewolf.enable = false;
+ 	browsers.firefox.bookmarks.school.enable = true;
+
+	# Enable home manager for my main user
+	home-manager = {
+		extraSpecialArgs = { inherit inputs; };
+		users = {
+			"callum" = import ./home.nix;
+		};
+	};
+
+  services = {
+    desktopManager.plasma6.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
+  };
+}
