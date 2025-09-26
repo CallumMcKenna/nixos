@@ -8,7 +8,6 @@
 		# nixos modules
 		./../../modules/nixos/default.nix
 		./../../modules/nixos/browsers/default.nix
-    #./../../modules/nixos/vpn/vpn.nix
   ];
 
 	# Enable home manager for my main user

@@ -34,24 +34,6 @@
 					inputs.home-manager.nixosModules.default
 				];
 			};
-
-      school-wm = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/school-wm/configuration.nix
-          inputs.nvf.nixosModules.default
-          inputs.home-manager.nixosModules.default
-        ];
-      };
-
-      school-env = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/school-env/configuration.nix
-          inputs.nvf.nixosModules.default
-          inputs.home-manager.nixosModules.default
-        ];
-      };
 		};
 	};
 }
