@@ -10,7 +10,6 @@
     ./alacritty.nix
     ./eza.nix
     ./lf.nix
-    ./../display/sway/home-manager.nix 
   ];
 
   config = lib.mkIf config.defaultPkgs.enable {
