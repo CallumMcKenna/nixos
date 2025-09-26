@@ -10,6 +10,7 @@
 
   imports = [
     ./nvf.nix
+    ./browsers.nix
   ];
 
   config = lib.mkIf config.defaultPkgs.enable {

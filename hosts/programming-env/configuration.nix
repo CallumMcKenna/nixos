@@ -7,7 +7,6 @@
 
 		# nixos modules
 		./../../modules/nixos/default.nix
-		./../../modules/nixos/browsers/default.nix
   ];
 
 	# Enable home manager for my main user

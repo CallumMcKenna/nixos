@@ -3,7 +3,7 @@
 {
   imports = [
     ./defaultUser.nix
-      ./defaultPkgs.nix
+    ./defaultPkgs.nix
   ];
 
 # Enable flakes
