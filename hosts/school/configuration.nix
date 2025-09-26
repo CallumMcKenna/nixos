@@ -8,7 +8,10 @@
 		# nixos modules
 		./../../modules/nixos/default.nix
 		./../../modules/nixos/browsers/default.nix
+<<<<<<< HEAD
     #./../../modules/nixos/vpn/vpn.nix
+=======
+>>>>>>> 470af26 (changed file structure)
   ];
 
   browsers.tor.enable = false;
@@ -23,8 +26,18 @@
 		};
 	};
 
+<<<<<<< HEAD
 	programs.sway = {
 		enable = true;
 		wrapperFeatures.gtk = true;
 	};
+=======
+  services = {
+    desktopManager.plasma6.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
+  };
+>>>>>>> 470af26 (changed file structure)
 }

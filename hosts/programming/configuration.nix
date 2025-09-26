@@ -8,7 +8,10 @@
 		# nixos modules
 		./../../modules/nixos/default.nix
 		./../../modules/nixos/browsers/default.nix
+<<<<<<< HEAD
     #./../../modules/nixos/vpn/vpn.nix
+=======
+>>>>>>> 470af26 (changed file structure)
   ];
 
 	# Enable home manager for my main user
@@ -18,9 +21,12 @@
 			"callum" = import ./home.nix;
 		};
 	};
+<<<<<<< HEAD
 
 	programs.sway = {
 		enable = true;
 		wrapperFeatures.gtk = true;
 	};
+=======
+>>>>>>> 470af26 (changed file structure)
 }

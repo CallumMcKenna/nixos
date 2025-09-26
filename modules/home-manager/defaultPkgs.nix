@@ -10,7 +10,11 @@
     ./alacritty.nix
     ./eza.nix
     ./lf.nix
+<<<<<<< HEAD
     ./../display/sway/home-manager.nix 
+=======
+    ./../sway/home-manager.nix 
+>>>>>>> 470af26 (changed file structure)
   ];
 
   config = lib.mkIf config.defaultPkgs.enable {
