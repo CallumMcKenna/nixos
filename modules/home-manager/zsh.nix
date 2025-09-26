@@ -11,8 +11,8 @@
       syntaxHighlighting.enable = true;
 
       shellAliases = {
-        os-p = "sudo nixos-rebuild switch --flake ~/config/#programming --cores $(nproc)";
-        os-s = "sudo nixos-rebuild switch --flake ~/config/#school --cores $(nproc)";
+        os-wm = "sudo nixos-rebuild switch --flake ~/config/#programming-wm --cores $(nproc)";
+        os-env = "sudo nixos-rebuild switch --flake ~/config/#programming-env --cores $(nproc)";
         coll = "nix-collect-garbage";
         coll-d = "nix-collect-garbage --delete-old";
         dev = "nix develop --command zsh";

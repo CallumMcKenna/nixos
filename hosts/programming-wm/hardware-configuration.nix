@@ -5,45 +5,15 @@
 
 {
   imports =
-<<<<<<< HEAD
-    [ (modulesPath + "/hardware/network/broadcom-43xx.nix")
-    (modulesPath + "/installer/scan/not-detected.nix")
-    ];
-
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
-=======
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "vmd" "xhci_pci" "ahci" "nvme" "usbhid" ];
->>>>>>> 470af26 (changed file structure)
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-<<<<<<< HEAD
-  { device = "/dev/disk/by-uuid/58c5a023-58cb-4f91-aed5-cb45ca50e944";
-    fsType = "ext4";
-  };
-
-  boot.initrd.luks.devices."luks-b23fef63-2a78-4a32-9fbf-bee78f526aa5".device = "/dev/disk/by-uuid/b23fef63-2a78-4a32-9fbf-bee78f526aa5";
-
-  fileSystems."/boot" =
-  { device = "/dev/disk/by-uuid/8B38-8488";
-    fsType = "vfat";
-    options = [ "fmask=0077" "dmask=0077" ];
-  };
-
-  swapDevices = [ ];
-
-# Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-# (the default) this is the recommended approach. When using systemd-networkd it's
-# still possible to use this option, but it's recommended to use it in conjunction
-# with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-# networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
-=======
     { device = "/dev/disk/by-uuid/b75cb777-33f2-4425-84c3-1bb732c8b8b2";
       fsType = "ext4";
     };
@@ -64,7 +34,6 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp6s0.useDHCP = lib.mkDefault true;
->>>>>>> 470af26 (changed file structure)
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
