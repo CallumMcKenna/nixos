@@ -6,7 +6,7 @@
   config = lib.mkIf config.defaultPkgs.enable { # Declared in defaultPkgs.nix
     programs.alacritty = lib.mkIf config.defaultPkgs.alacritty.enable {
       enable = true;
-      theme = "nord";
+      theme = "gruvbox_material";
       settings.window.opacity = 0.9;
     };
   };

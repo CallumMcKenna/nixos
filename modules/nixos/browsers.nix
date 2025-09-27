@@ -1,11 +1,6 @@
 { lib, config, pkgs, ... }:
 
 {
-	imports = [
-		./bookmarks/ai.nix
-		./bookmarks/school.nix
-	];
-
 	options.browsers = {
 		enable = lib.mkEnableOption "Enable defaultBrowsers" // { default = true; };
 		tor.enable = lib.mkEnableOption "Install Tor-Browser" // { default = true; };

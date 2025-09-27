@@ -20,7 +20,8 @@
           };
           theme = {
             enable = true;
-            name = "nord";
+            name = "gruvbox";
+            style = "dark";
           };
 
           # Plugins
