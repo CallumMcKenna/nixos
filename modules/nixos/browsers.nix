@@ -13,13 +13,13 @@
 	};
 
 	config = lib.mkIf config.browsers.enable {
-		environment.systemPackages = (lib.optionals config.browsers.tor.enable [ pkgs.tor-browser ]);
+		environment.systemPackages = lib.mkIf config.browsers.tor.enable [ pkgs.tor-browser ];
 	
 		programs.firefox = lib.mkIf config.browsers.librewolf.enable {
 			enable = true;
 			package = pkgs.librewolf;
       languagePacks = [ "de" "en-US" ];
-		  policies.Bookmarks = [
+		  policies.Bookmarks = [ # IDK why but it isn't working
         {
           Title = "Grok";
           URL = "https://grok.com/";
