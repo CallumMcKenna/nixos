@@ -49,6 +49,7 @@
               suggestion.enabled = true;
             };
           };
+          filetree.nvimTree.enable = true;
 
           lsp.enable = true;
           languages = {
