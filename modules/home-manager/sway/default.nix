@@ -16,8 +16,8 @@ in
   options.defaultPkgs.sway.enable = lib.mkEnableOption "Enables the sway home manager module" // { default = true; };
 
   imports = [
-    ./waybar/home-manager.nix
-    ./swaylock/home-manager.nix
+    ./waybar/default.nix
+    ./swaylock.nix
   ];
 
   config = lib.mkIf config.defaultPkgs.enable {
@@ -30,7 +30,7 @@ in
         # Launch waybar on startup
         startup = [
           { command = "waybar"; }
-          { command = "swww img ~/config/modules/sway/wallpaper.jpg"; }
+          { command = "swww img ~/config/wallpaper.jpg"; }
         ];
 
         window.titlebar = false;

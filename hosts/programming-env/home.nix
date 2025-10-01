@@ -7,6 +7,7 @@
 
 	imports = [
 	        ./../../modules/home-manager/default.nix
+          ./../../modules/home-manager/plasma.nix
   ];
 
 	# This value determines the Home Manager release that your configuration is
