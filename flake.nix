@@ -39,22 +39,14 @@
           ];
         };
 
-        programming-env = nixpkgs.lib.nixosSystem {
+        pc = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           inherit system;
 
           modules = [
-            ./hosts/programming-env/configuration.nix
+            ./hosts/pc/configuration.nix
             inputs.nvf.nixosModules.default
-            inputs.home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
-                #users."${username}" = import ./hosts/programming-env/home.nix;
-              };
-            }
+            inputs.home-manager.nixosModules.default
           ];
         };
       };
