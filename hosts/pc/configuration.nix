@@ -8,4 +8,5 @@
   ];
 
   networking.hostName = "pc";
+  home-manager.users."callum" = import ./home.nix;
 }

@@ -14,10 +14,6 @@
       #useGlobalPkgs = true;
       #useUserPkgs = true;
       sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
-
-      users = {
-        "callum" = import ./home.nix;
-      };
     };
   };
 }
