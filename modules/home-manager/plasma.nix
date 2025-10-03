@@ -80,7 +80,7 @@
             iconTasks = {
               launchers = [
                 "applications:org.kde.dolphin.desktop"
-                "applications:org.kde.konsole.desktop"
+                "applications:org.kde.alacritty.desktop"
               ];
             };
           }

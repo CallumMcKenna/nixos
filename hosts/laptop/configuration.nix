@@ -9,6 +9,8 @@
 		./../../modules/nixos/default.nix
   ];
 
+  networking.hostName = "laptop";
+
 	# Enable home manager for my main user
 	home-manager = {
 		extraSpecialArgs = { inherit inputs; };

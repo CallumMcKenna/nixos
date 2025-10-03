@@ -24,31 +24,25 @@
   };
 
 	outputs = { self, nixpkgs, ... }@inputs: 
-		let                  
-      system = "x86_64-linux";
-      username = "callum";
-    in 
-    {
-      nixosConfigurations = {
-        programming-wm = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/programming-wm/configuration.nix
-            inputs.nvf.nixosModules.default
-            inputs.home-manager.nixosModules.default
-          ];
-        };
-
-        pc = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          inherit system;
-
-          modules = [
-            ./hosts/pc/configuration.nix
-            inputs.nvf.nixosModules.default
-            inputs.home-manager.nixosModules.default
-          ];
-        };
+  {
+    nixosConfigurations = {
+      laptop = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/laptop/configuration.nix
+          inputs.nvf.nixosModules.default
+          inputs.home-manager.nixosModules.default
+        ];
       };
-	  };
+
+      pc = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/pc/configuration.nix
+          inputs.nvf.nixosModules.default
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+    };
+  };
 }
