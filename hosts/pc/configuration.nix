@@ -4,9 +4,8 @@
 	imports = [
 		./hardware-configuration.nix
 		inputs.home-manager.nixosModules.default
-
-		# nixos modules
 		./../../modules/nixos/default.nix
+    ./../../modules/nixos/plasma.nix
   ];
 
   networking.hostName = "pc";
@@ -22,12 +21,4 @@
 			"callum" = import ./home.nix;
 		};
 	};
-
-  services = {
-    desktopManager.plasma6.enable = true;
-   displayManager.sddm = {
-     enable = true;
-     wayland.enable = true;
-   };
-  };
 }
