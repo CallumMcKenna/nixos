@@ -30,7 +30,7 @@ in
         # Launch waybar on startup
         startup = [
           { command = "waybar"; }
-          { command = "swww img ~/config/wallpaper.jpg"; }
+          { command = "swww img ~/config/wallpapers/gatsby.jpg"; }
         ];
 
         window.titlebar = false;

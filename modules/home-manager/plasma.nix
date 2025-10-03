@@ -14,7 +14,7 @@
         size = 32;
       };
       iconTheme = "Papirus-Dark";
-      wallpaper = /home/callum/config/wallpaper.jpg;
+      wallpaper = /home/callum/config/wallpapers/gatsby.jpg;
     };
 
     hotkeys.commands."launch-konsole" = {

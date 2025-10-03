@@ -4,6 +4,7 @@
   imports = [
     ./defaultUser.nix
     ./defaultPkgs.nix
+    ./home-manager.nix
   ];
 
 # Enable flakes
