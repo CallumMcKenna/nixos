@@ -3,7 +3,6 @@
 {
   imports = [
     ./swaylock.nix
-    ./waybar.nix
   ];
 
   security.polkit.enable = true;
