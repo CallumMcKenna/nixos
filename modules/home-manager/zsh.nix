@@ -13,9 +13,10 @@
       shellAliases = {
         os-l = "sudo nixos-rebuild switch --flake ~/config/#laptop --cores $(nproc)";
         os-p = "sudo nixos-rebuild switch --flake ~/config/#pc --cores $(nproc)";
-        coll-d = "nix-collect-garbage --delete-older-than 1d";
+        coll = "nix-collect-garbage --delete-older-than 1d";
+        coll-d = "nix-collect-garbage --delete-old";
         dev = "nix develop --command zsh";
-        l = "eza";
+        ls = "eza";
         cl = "clear";
         nv = "nvim";
         tr = "tree";
