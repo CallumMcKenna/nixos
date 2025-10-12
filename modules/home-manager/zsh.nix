@@ -11,8 +11,8 @@
       syntaxHighlighting.enable = true;
 
       shellAliases = {
-        os-lap = "sudo nixos-rebuild switch --flake ~/config/#laptop --cores $(nproc)";
-        os-pc = "sudo nixos-rebuild switch --flake ~/config/#pc --cores $(nproc)";
+        os-l = "sudo nixos-rebuild switch --flake ~/config/#laptop --cores $(nproc)";
+        os-p = "sudo nixos-rebuild switch --flake ~/config/#pc --cores $(nproc)";
         coll-d = "nix-collect-garbage --delete-older-than 1d";
         dev = "nix develop --command zsh";
         l = "eza";
