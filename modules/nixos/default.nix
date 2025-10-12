@@ -5,6 +5,7 @@
     ./defaultUser.nix
     ./defaultPkgs.nix
     ./home-manager.nix
+    ./fonts.nix
   ];
 
 # Enable flakes

@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ ... }:
 
 let
   mod = "Mod4";
@@ -7,8 +7,8 @@ let
   networkmanager = "nmtui";
 
   browserMostlySecure = "tor-browser";
-  browserLessSecure = "librewolf";
-  browserEvenLessSecure = "firefox"; # It's hardened firefox made to be slightly less secure than librewolf to not break websites	
+  browserLessSecure = "brave";
+  browserEvenLessSecure = "firefox"; # It's hardened firefox made to not break websites
 
   lock = "swaylock";
 in
