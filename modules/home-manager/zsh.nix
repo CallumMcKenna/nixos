@@ -14,7 +14,7 @@
         os-l = "sudo nixos-rebuild switch --flake ~/config/#laptop --cores $(nproc)";
         os-p = "sudo nixos-rebuild switch --flake ~/config/#pc --cores $(nproc)";
         coll = "nix-collect-garbage --delete-older-than 1d";
-        coll-d = "nix-collect-garbage --delete-old";
+        coll-d = "nix-collect-garbage -d";
         dev = "nix develop --command zsh";
         ls = "eza";
         cl = "clear";
