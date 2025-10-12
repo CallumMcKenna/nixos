@@ -6,14 +6,14 @@
     settings.mainBar = {
       modules-left = [ "clock" "network" "pulseaudio" ];
       modules-center = [ "sway/workspaces" ];
-      modules-right = [ "temperature" "cpu" "memory" "group/disk" "battery" ];
+      modules-right = [ "temperature" "cpu" "memory" "disk" "battery" ];
 
       # Disk group
       "disk" = {
         format = "Disk: {percentage_used}%";
       };
 
-      "disk#config" = {
+      "disk#config" = { # This just displays the size of the whole disk
         path = ./../../..;
         format = "Config: {used}";
       };
