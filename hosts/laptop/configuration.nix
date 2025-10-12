@@ -4,7 +4,7 @@
 	imports = [
 		./hardware-configuration.nix
 		./../../modules/nixos/default.nix
-    ./../../modules/nixos/sway/default.nix
+    ./../../modules/nixos/swaylock.nix
   ];
 
   networking.hostName = "laptop";
