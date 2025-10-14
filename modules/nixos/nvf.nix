@@ -1,5 +1,8 @@
 { lib, config, ... }: {
-  options.defaultPkgs.nvf.enable = lib.mkEnableOption "enables nvf" // { default = true; };
+  options = {
+    defaultPkgs.nvf.enable = lib.mkEnableOption "enables nvf" // { default = true; };
+    nvf.colorscheme.nord.enable = lib.mkEnableOption "changes the nvf colorscheme from gruvbox(the default is gruvbox)" // { default = false; };
+  };
 
   config = lib.mkIf config.defaultPkgs.enable { # Option enabled in ./defaultPkgs.nix
     programs.nvf = lib.mkIf config.defaultPkgs.nvf.enable {
@@ -20,7 +23,7 @@
           };
           theme = {
             enable = true;
-            name = "gruvbox";
+            name = if config.nvf.colorscheme.nord.enable then "nord" else "gruvbox";
             style = "dark";
           };
 

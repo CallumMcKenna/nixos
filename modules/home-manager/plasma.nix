@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  wallpaper = ../../wallpapers/gatsby.jpg;
+  wallpaper = ../../wallpapers/tlou.jpg;
 in
 {
   programs.plasma = {
