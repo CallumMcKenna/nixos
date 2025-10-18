@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 let
   wallpaper = ../../wallpapers/tlou.jpg;
@@ -24,7 +24,7 @@ in
     hotkeys.commands."launch-konsole" = {
       name = "Launch Konsole";
       key = "Meta+Alt+K";
-      command = "konsole";
+      command = "alacritty";
     };
 
     fonts = {
@@ -49,7 +49,6 @@ in
             iconTasks = {
               launchers = [
                 "applications:org.kde.dolphin.desktop"
-                "alacritty"
               ];
             };
           }
@@ -172,13 +171,11 @@ in
     kwin = {
       edgeBarrier = 0; # Disables the edge-barriers introduced in plasma 6.1
       cornerBarrier = false;
-
       scripts.polonium.enable = true;
     };
 
     kscreenlocker = {
       lockOnResume = true;
-      #lockOnStartup = true; # It always starts a lock screen without the wallpaper, then after I pass that, then opens this lock screen
       timeout = 10;
       appearance.wallpaper = "${wallpaper}";
     };
@@ -210,10 +207,18 @@ in
       baloofilerc."Basic Settings"."Indexing-Enabled" = false;
       kwinrc."org.kde.kdecoration2".ButtonsOnLeft = "SF";
       kwinrc.Desktops.Number = {
-        value = 8;
+        value = 10;
         # Forces kde to not change this value (even through the settings app).
         immutable = true;
       };
+
+      kscreenlockerrc = {
+        Greeter.WallpaperPlugin = lib.mkForce "org.kde.potd";
+        # To use nested groups use / as a separator. In the below example,
+        # Provider will be added to [Greeter][Wallpaper][org.kde.potd][General].
+        "Greeter/Wallpaper/org.kde.potd/General".Provider = "bing";
+      };
     };
+    overrideConfig = true;
   };
 }
