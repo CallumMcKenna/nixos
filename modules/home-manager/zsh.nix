@@ -16,7 +16,6 @@
         cl = "clear";
         nv = "nvim";
         tr = "tree";
-        tr-c = "tree ~/config";
         neo = "neofetch";
         py = "python3";
         veiw = "feh";
