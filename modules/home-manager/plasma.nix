@@ -194,7 +194,7 @@ in
       ksmserver = {
         "Lock Session" = [
           "Screensaver"
-          "Meta+C"
+          "Meta+Alt+L"
         ];
       };
 
