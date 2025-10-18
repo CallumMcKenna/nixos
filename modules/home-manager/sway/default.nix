@@ -28,6 +28,7 @@ in
       startup = [
         { command = "waybar"; }
         { command = "swww img ~/config/wallpapers/gatsby.jpg"; }
+        { command = "swaylock"; }
       ];
 
       window.titlebar = false;
