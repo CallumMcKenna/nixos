@@ -21,10 +21,17 @@ in
       wallpaper = "${wallpaper}";
     };
 
-    hotkeys.commands."launch-konsole" = {
-      name = "Launch Konsole";
-      key = "Meta+Alt+K";
-      command = "alacritty";
+    hotkeys.commands = {
+      "launch-alacritty" = {
+        name = "Launch Alacritty";
+        key = "Meta+Alt+T";
+        command = "alacritty";
+      };
+      "launch-brave" = {
+        name = "Launch Brave";
+        key = "Meta+Alt+B";
+        command = "brave";
+      };
     };
 
     fonts = {

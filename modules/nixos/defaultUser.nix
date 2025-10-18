@@ -1,7 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
-  options.zsh.enable = lib.mkEnableOption "enables zsh" // { default = true; };
+  options = {
+    zsh.enable = lib.mkEnableOption "enables zsh" // { default = true; };
+    autoLogin.callum.enable = lib.mkEnableOption "enables autologin of user callum" // { default = true; };
+  };
 
   config = {
     users.users.callum = {
@@ -14,7 +17,7 @@
 
     programs.zsh.enable = lib.mkIf config.zsh.enable true;
 
-# Enable autologin
-    services.getty.autologinUser = "callum";
+    # Enable autologin
+    services.getty.autologinUser = lib.mkIf config.autoLogin.callum.enable "callum";
   };
 }
