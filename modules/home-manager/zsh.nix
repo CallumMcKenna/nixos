@@ -23,6 +23,7 @@
         tr-c = "tree ~/config";
         neo = "neofetch";
         py = "python3";
+        veiw = "feh";
       };
       history.size = 10000;
 
